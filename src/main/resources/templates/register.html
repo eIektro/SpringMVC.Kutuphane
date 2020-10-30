@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Girişi</title>
+</head>
+<body>
+    <h1>Formu kullanarak üye olabilirsiniz</h1>
+    <br>
+    <hr>
+    <form th:action="@{/register}" th:object="${uyelikFormu}" method="POST">
+    <p>İsim: <input type="text" name="Isim"/></p> 
+    <p>Soyisim: <input type="text" name="Soyisim"/></p>
+    <p>e-Posta: <input type="text" name="ePosta"/></p>
+    <p>Kullanıcı Adı: <input type="text" name="KullaniciAdi"/></p>
+    <p>Şifre: <input type="password" name="Passwd"/></p>
+    <p><input type="submit" value="Kaydol"/></p>
+    
+    </form>
+</body>
+</html>
